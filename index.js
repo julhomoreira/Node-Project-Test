@@ -7,7 +7,11 @@ server.get('/usuario', (req, res) => {
 })
 
 server.get('/usuario2', (req, res) => {
-    return res.send("Ésse é o seu usuário 2")
+
+    console.log(req.query.abacaxi)
+    return res.send(` O usuário digitou esse valor: , ${req.query.abacaxi}`)
 })
 
 server.listen(3000)
+
+
